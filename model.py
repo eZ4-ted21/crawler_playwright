@@ -3,3 +3,4 @@ from pydantic import BaseModel
 class DataModel(BaseModel):
     url : str
     title : str
+    price : str

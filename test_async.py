@@ -1,16 +1,11 @@
 import asyncio
 from playwright.async_api import async_playwright
 from async_strategy import Execute
-from model import DataModel
 
-url = 'https://geeksforgeeks.org'
+url = 'https://urbangadgets.ph/category/aerial-photography/drone/?srsltid=AfmBOoq2ykFbvAeqBvZOAVZN9OA0nx_RoFbIeE_uoKCTS55CkxhBEHbf'
 
 async def main():
     async with async_playwright() as playwright:
-        _data = await Execute().run(playwright, url)
-        scrapedData = DataModel(
-            url = _data['url'],
-            title = _data['title']
-        )
-        print(scrapedData)
+        _data : list = await Execute().run(playwright, url)
+        print(_data)
 asyncio.run(main())

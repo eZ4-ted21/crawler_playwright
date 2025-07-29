@@ -8,7 +8,7 @@
             "name": "Python: Launch with virtualenv",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/test_async.py",
+            "program": "${workspaceFolder}/test_sync.py",
             "console": "integratedTerminal"
         }
     ]
